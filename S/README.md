@@ -1,17 +1,17 @@
 # Single Responsibility Principle (SRP)
 
-_A class should have only one reason to change._ -- Robert C. Martin
+```text
+A class should have only one reason to change. -- Robert C. Martin
+```
 
 This principle comes to save us from fragility. The opposite to a fragile
 model is a ductile model and that is what we want to achieve, ductility.
-As Robert says in his book 
+As Robert says in his book:
 
-```text
-"If a class has more than one responsibility, then the responsibilities 
+_"If a class has more than one responsibility, then the responsibilities 
 become coupled. Changes to one responsibility may impair or inhibit 
 the ability of the class to meet the others. This kind of coupling 
-leads to fragile designs that break in unexpected ways when changed."
-```
+leads to fragile designs that break in unexpected ways when changed."_
 
 Since we don't have classes in Go, we first need to identify which
 is the most basic unit we could use to wrap a concept and that are packages. 

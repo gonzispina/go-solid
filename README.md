@@ -4,9 +4,11 @@ How to apply SOLID principles while gophing. But, what are these principles anyw
 
 ## Agile Design
 
-_“After reviewing the software development life cycle as I understood it, I concluded that the only software 
+```text
+“After reviewing the software development life cycle as I understood it, I concluded that the only software 
 documentation that actually seems to satisfy the criteria of an engineering design is the source code 
-listings.”_ -— Jack Reeves
+listings.” -— Jack Reeves
+```
 
 First we need to talk about designing. The design of a code is the code itself. 
 It is not a bunch of UML diagrams and documents, that may or may not 
@@ -18,7 +20,9 @@ That leads us to another question, how do we know if the design is good or not?
 
 ### Indentifying poorly designed code
 
-_"Everything should be made as simple as possible, but not simpler."_ -- Albert Einstein
+```text
+"Everything should be made as simple as possible, but not simpler." -- Albert Einstein
+```
 
 Well... thankfully [Robert C. Martin](https://en.wikipedia.org/wiki/Robert_C._Martin) already identified what, in his book 
 _"Agile Software Development: Principles, Patterns, and Practices"_, calls
@@ -70,8 +74,8 @@ to these problems as what he called the SOLID principles. SOLID stands for:
  
  _NOTE: keep in mind that the examples of every principle are designed to isolate
  and expose the key idea of each principle. None of the examples combine all of
- the principles. Of course, if we applied every principle in each example the code
- would be much better, but that's not the point_
+ them. Of course, if we applied every principle in each example the code
+ would be much better, but that's not the point._
 
 ## Bibliography
 
