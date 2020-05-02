@@ -65,11 +65,11 @@ written in a clear and expressive manner, or it can be written in an opaque and 
 
 Robert not only identified this issues through his experience, but also the solutions
 to these problems as what he called the SOLID principles. SOLID stands for:
- - [Single Responsibility (SRP)]()
- - [Open / Closed (OCP)]()
- - [Liskov's Substitution (LSP)]()
- - [Interface Segregation (ISP)]()
- - [Dependency Inversion (DIP)]()
+ - [Single Responsibility (SRP)](https://github.com/gonzispina/go-solid/tree/master/S)
+ - [Open / Closed (OCP)](https://github.com/gonzispina/go-solid/tree/master/O)
+ - [Liskov's Substitution (LSP)](https://github.com/gonzispina/go-solid/tree/master/L)
+ - [Interface Segregation (ISP)](https://github.com/gonzispina/go-solid/tree/master/I)
+ - [Dependency Inversion (DIP)](https://github.com/gonzispina/go-solid/tree/master/D)
  
  _NOTE: keep in mind that the examples of every principle are designed to isolate
  and expose the key idea of each principle. None of the examples combine all of
