@@ -1,8 +1,6 @@
 # Open-Closed Principle (OCP)
 
-```text
-Software entities should be open for extension, but closed for modification. –Bertrand Meyer
-```
+_Software entities should be open for extension, but closed for modification._ –- Bertrand Meyer
 
 When a single change to a program results in a cascade of changes to dependent modules, the design smells of
 Rigidity. If the OCP is applied well, in the future we will only have to add new code instead of modifying the
@@ -28,10 +26,10 @@ that the abstraction we'll write is going to be the one that suits the model.
 
 ## Examples
 
-- [Wrong](): in this example we see an un-extensible transaction implementation. New requirements to this portion of code
+- [Wrong](https://github.com/gonzispina/go-solid/tree/master/O/wrong): in this example we see an un-extensible transaction implementation. New requirements to this portion of code
 will end up with us adding methods and validations in it as it is done in the _cancel_ method.
 
-- [Right](): here we can see the principle applied. There is an abstraction as interface to represent our transaction, a base implementation
+- [Right](https://github.com/gonzispina/go-solid/tree/master/O/right): here we can see the principle applied. There is an abstraction as interface to represent our transaction, a base implementation
 which is closed and has the common behaviour of every transaction, and two more structs implementing the class and being a 
 composition of the _BaseTransaction_. It is clearly visible how the _NationalTransaction_ is extending the base implementation
 by adding the cancel method. Further changes in this kind of code would result in the creation of new structs instead of 

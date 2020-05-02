@@ -1,13 +1,12 @@
 
 # Go SOLID
-How to apply SOLID principles while gophing. **But, what are these principles anyway?**
+How to apply SOLID principles while gophing. But, what are these principles anyway?
 
 ## Agile Design
-```text
-“After reviewing the software development life cycle as I understood it, I concluded that the only software 
+
+_“After reviewing the software development life cycle as I understood it, I concluded that the only software 
 documentation that actually seems to satisfy the criteria of an engineering design is the source code 
-listings.” -— Jack Reeves
-```
+listings.”_ -— Jack Reeves
 
 First we need to talk about designing. The design of a code is the code itself. 
 It is not a bunch of UML diagrams and documents, that may or may not 
@@ -15,13 +14,11 @@ help us to describe the code, but the code itself.
 
 In agile teams the big picture evolves along with the software, and the team
 makes its effort to improve the design to be as good it can be at that exact moment.
-That leads us to another question, **how do we know if the design is good or not?**
+That leads us to another question, how do we know if the design is good or not?
 
 ### Indentifying poorly designed code
 
-```
-"Everything should be made as simple as possible, but not simpler." -- Albert Einstein
-```
+_"Everything should be made as simple as possible, but not simpler."_ -- Albert Einstein
 
 Well... thankfully [Robert C. Martin](https://en.wikipedia.org/wiki/Robert_C._Martin) already identified what, in his book 
 _"Agile Software Development: Principles, Patterns, and Practices"_, calls

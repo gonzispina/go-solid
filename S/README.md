@@ -1,16 +1,17 @@
 # Single Responsibility Principle (SRP)
-```text
-A class should have only one reason to change. -- Robert C. Martin
-```
+
+_A class should have only one reason to change._ -- Robert C. Martin
 
 This principle comes to save us from fragility. The opposite to a fragile
 model is a ductile model and that is what we want to achieve, ductility.
 As Robert says in his book 
 
-_"If a class has more than one responsibility, then the responsibilities 
+```text
+"If a class has more than one responsibility, then the responsibilities 
 become coupled. Changes to one responsibility may impair or inhibit 
 the ability of the class to meet the others. This kind of coupling 
-leads to fragile designs that break in unexpected ways when changed."_
+leads to fragile designs that break in unexpected ways when changed."
+```
 
 Since we don't have classes in Go, we first need to identify which
 is the most basic unit we could use to wrap a concept and that are packages. 
@@ -37,8 +38,8 @@ a bigger model is what this principle is about.
 
 ### Examples
 
-- [Wrong]() in this example we can see how the persistence layer is coupled with 
+- [Wrong](https://github.com/gonzispina/go-solid/tree/master/S/wrong) in this example we can see how the persistence layer is coupled with 
 to the business logic of the user's implementation. 
 
-- [Right](): simple but obvious, we moved the persistence logic to its
+- [Right](https://github.com/gonzispina/go-solid/tree/master/S/right): simple but obvious, we moved the persistence logic to its
 own package and isolated the business logic in its own package.
