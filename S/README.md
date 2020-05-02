@@ -33,8 +33,7 @@ is not **coupled** to one and only notation. If we go even further, the _xml_ pa
 is not coupled with the _json_ package either, and changes in one of them probably won't
 have repercussions in the other.
 
-Stretching the packages to be as small as possible and then combining the to build 
-a bigger model is what this principle is about.
+Stretching the packages to be as atomic as they can be is what this principle is about in go.
 
 ### Examples
 

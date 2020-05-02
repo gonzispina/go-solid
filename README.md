@@ -81,3 +81,11 @@ to these problems as what he called the SOLID principles. SOLID stands for:
 
 - _"Agile Software Development, Principles, Patterns, and Practices"_. Robert C. Martin, 15 Oct. 2002. 
 - _"Solid Go design"_ -- Dave Cheney, 20 Aug. 2016. 
+
+## Further Reading
+
+- Liskov, Barbara. Data Abstraction and Hierarchy. SIGPLAN Notices, 23,5 (May 1988).
+- Meyer, Bertrand. Object-Oriented Software Construction, 2d ed. Upper Saddle River, NJ: Prentice Hall, 1997.
+
+
+
