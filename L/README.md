@@ -1,14 +1,13 @@
 # Liskov Substitution Principle (LSP)
 
 ```text
-What is wanted here is something like the following substitution property: If for each object of type
-S there is an object of type T such that for all programs P defined in terms of T, the behavior of P
-is unchanged when is substituted for then S is a subtype of T. -- Barbara Liskov
+What is wanted here is something like the following substitution property: If for each object of type S there is an object of 
+type T such that for all programs P defined in terms of T, the behavior of P is unchanged when is substituted for then S is a 
+subtype of T. -- Barbara Liskov
 ```
 
-This principle was coined by [Barbara Liskov](https://www.youtube.com/watch?v=_jTc1BTFdIo) in 1988. Simplifying 
-what she wrote in his paper this what this principle means is that **every subtype of an entity should
-be replaceable by its base entity**.
+This principle was coined by [Barbara Liskov](https://www.youtube.com/watch?v=_jTc1BTFdIo) in 1988. Simplifying what she wrote in 
+his paper this what this principle means is that **every subtype of an entity should be replaceable by its base entity**.
 
 _"The importance of this principle becomes obvious when you consider the consequences of violating it. Presume that we have a function f that takes, as its argument, a pointer or reference to some base class B. Presume also
 that there is some derivative D of B which, when passed to f in the guise of B, causes f to misbehave. Then D violates the LSP. Clearly D is Fragile in the presence of f.
