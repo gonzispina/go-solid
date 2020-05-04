@@ -10,7 +10,8 @@ seems to satisfy the criteria of an engineering design is the source code listin
 ```
 
 First we need to talk about designing. The design of a code is the code itself. It is not a bunch of UML diagrams and documents, that 
-may or may not help us to describe the code, but the code itself.
+may or may not help us to describe the code, but the code itself. If agility is build software in tiny increments, how can developers 
+take the time to ensure that the code is flexible, maintainable and re-usable? 
 
 In agile teams the big picture evolves along with the software, and the team makes its effort to improve the design to be as good it can 
 be at that exact moment. That leads us to another question, how do we know if the design is good or not?
