@@ -1,7 +1,7 @@
 # Open-Closed Principle (OCP)
 
 ```text
-Software entities should be open for extension, but closed for modification. –- Bertrand Meyer
+Software entities should be open for extension, but closed for modification. –- Bertrand Meyer, Object-Oriented Software Construction
 ```
 
 When a single change to a program results in a cascade of changes to dependent modules, the design smells of Rigidity. If the OCP

@@ -64,10 +64,10 @@ principles. SOLID stands for:
 the examples combine all of them. Of course, if we applied every principle in each example the code would be much better, but that's not
  the point._
 
-## Bibliography
+## References
 
-- _"Agile Software Development, Principles, Patterns, and Practices"_. Robert C. Martin, 15 Oct. 2002. 
-- _"Solid Go design"_ -- Dave Cheney, 20 Aug. 2016. 
+- _"Agile Software Development, Principles, Patterns, and Practices"_. Robert C. Martin, 15 Oct. 2002. (p85-145) 
+- _"Solid Go design"_ -- Dave Cheney, 20 Aug. 2016. ([Youtube](https://www.youtube.com/watch?v=zzAdEt3xZ1M)) 
 
 ## Further Reading
 
