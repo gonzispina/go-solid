@@ -20,62 +20,58 @@ OK, but in Go we don't have sub types because we don't have inheritance, yet we 
 code should clarify this concept to us.
 
 ```go
-package wonderful_package
-import "reflect"
+package L
 
-// This is similar to the go's io.Reader abstraction
-type Reader interface {
-     Read(buf []byte) (n int, err error)
-     Close() (err error)
+type Writer interface {
+	Write(buf []byte) (err error)
+	Close() (err error)
 }
 
-type SomeReader struct {}
-func (a *SomeReader) Close() (err error) { 
-    // Do stuff
-    return err
+type SomeWriter struct {}
+func (s *SomeWriter) Write(buf []byte) (err error) {
+	// Do some stuff 
+	return err
+}
+func (s *SomeWriter) Close() (err error) {
+	// Do stuff
+	return err
 }
 
-func (s *SomeReader) Read(buf []byte) (n int, err error) {
-    // Do some stuff 
-    return n, err
+type AnotherWriter struct {}
+func (a *AnotherWriter) Write(buf []byte) (err error) {
+	// Do stuff 
+	return a.Close() // Side effect: closing itself!!!
+}
+func (a *AnotherWriter) Close() (err error) {
+	// Do another stuff
+	return err
 }
 
-type AnotherReader struct {}
-func (a *AnotherReader) Close() (err error) { 
-    // Do another stuff
-    return err
-}
 
-func (a *AnotherReader) Read(buf []byte) (n int, err error) {
-    // Do stuff 
-    err = a.Close() // Side effect: closing itself!!!   
-    return n, err
-}
-
-func StringToStream(r Reader, data string) (err error) {
-    buf := make([]byte, len(data))
-    for i := 0; i < len(data); i++ {
-        buf = append(buf, data[i])
-    }
+func StringToStream(r Writer, data string) (err error) {
+	buf := make([]byte, len(data))
+	for i := 0; i < len(data); i++ {
+		buf = append(buf, data[i])
+	}
     
-    _, err = r.Read(buf)
-    if err != nil {
-        return err
-    }
-    
-    if reflect.TypeOf(r).String() == "wonderful_package.AnotherReader" {
-        return nil
-    } else if reflect.TypeOf(r).String() == "wonderful_package.SomeReader" {
-        err = r.Close()
-        return err
-    } else {
-        return err
-    }
+	err = r.Write(buf)
+	if err != nil {
+		return err
+	}
+
+	if _, ok := r.(*AnotherWriter); ok {
+		return nil
+	} else if _, ok := r.(*SomeWriter); ok {
+		return r.Close()
+	} else {
+		return nil
+	}
 }
+
 ``` 
 
-In this example we can see how the struct _AnotherReader_ violates the LSP, forcing us to violate the OCP in the _StringToStream_ function.
-The later is know fragile and is forced to know every subtype of the _Reader_ abstraction, so it is not closed for modification.
+In this example we can see how the struct _AnotherWriter_ violates the LSP, forcing us to violate the OCP in the _StringToStream_ function.
+The later is know fragile and is forced to know every subtype of the _Writer_ abstraction, so it is not closed for modification.
 When we see an "if/else" chain, like the one present in _StringToStream_, where types are being used to determine the behaviour it
 is a clear violation of the LSP principle. 
 Personally I've verified lot of times that if we take an approach "more functional" while we write code, even if we are doing OOP,
@@ -92,7 +88,7 @@ in there clients.
 
 [Bertrand Meyer](https://es.wikipedia.org/wiki/Bertrand_Meyer) created a technique called _designing by contract_. Contracts are
 "reasonable assumptions" of what the behaviour of an entity should be. For example, a reasonable assumption for our previous example
-should be _"A Reader should continue open after its Read method is called"_. Some of the ways Robert propose to us to create those
+should be _"A Writer should continue open after its Write method is called"_. Some of the ways Robert propose to us to create those
 contracts is unit testing:
 
 ```text
