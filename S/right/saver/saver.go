@@ -5,10 +5,12 @@ import (
 	"os"
 )
 
-type Saver struct {}
+type Encoder interface {
+	Encode() string
+}
 
 // Save saves the implementation to the os
-func (s *Saver) Save(fileName, data string) bool {
+func SaveToFile(fileName string, data Encoder) bool {
 	f, err := os.Create(fileName)
 	if err != nil {
 		return false

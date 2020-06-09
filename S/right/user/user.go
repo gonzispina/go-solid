@@ -1,7 +1,7 @@
 package user
 
-// NewUser creates a user
-func NewUser(name string, age int) User {
+// New creates a user
+func New(name string, age int) User {
 	return User{
 		name: name,
 		age:  age,
